@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="p3.css">
+</head>
+
+<body onload="init()">
+    <main class="maincontaier">
+        <div class="welcomeScreen">
+            <h1>Guess the Random Number between 1-100</h1>
+            <img src="gameImg.webp" alt="error">
+            <section class="eventSection">
+                <p class="p1">Select The Difficulty</p>
+                <div class="buttons">
+                    <button class="glow-on-hover" onclick=" easyAttempts()">Easy:10 attempts</button>
+                    <button class="glow-on-hover" onclick="hardAttempt()">Hard:5 attempts</button>
+                </div>
+            </section>
+        </div>
+        <section id="gameArea">
+            <div id="newButton" ><button onclick="pageReload()">New Game</button></div>
+                <div id="input">
+                    <h2 id="popup">Your Guess</h2>
+                    <input type="number" min="1" max="100" id="inputBox" placeholder="Enter Your Number"
+                    onchange="compareGuess()">
+                </div>
+                <section id="stats">
+                    <div class="info">
+                       <div class="gue"> <p class="counts">Number of previous Attemts</p></div>
+                        <div class="att"><span id="attempts">0</span></div>
+                        </div>
+                    <div class="info">
+                        <div class="gue">  <p class="counts">Values of previous guesses</p></div>
+                        <div class="att"><span id="guesses">-</span></div>
+                        </div>
+                </section>
+        </section>
+    </main>
+    <script src="p3.js"></script>
+</body>
+
+</html>
